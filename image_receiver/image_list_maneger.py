@@ -1,4 +1,4 @@
-from image_logger.receiver import Receiver
+from image_receiver.receiver import Receiver
 from threading import Thread
 from typing import Callable
 

@@ -1,4 +1,4 @@
-from image_logger.image_list_maneger import ImageListManeger
+from image_receiver.image_list_maneger import ImageListManeger
 
 
 class IndexManeger:

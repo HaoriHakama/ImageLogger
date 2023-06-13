@@ -1,4 +1,4 @@
-from image_logger import app
+from image_receiver import app
 
 
 app.start()

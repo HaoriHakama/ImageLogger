@@ -1,9 +1,9 @@
 import flet as ft
 from pathlib import Path
 
-from image_logger.image_list_maneger import ImageListManeger
-from image_logger.index_maneger import IndexManeger
-from image_logger.control_bar import ControlBar
+from image_receiver.image_list_maneger import ImageListManeger
+from image_receiver.index_maneger import IndexManeger
+from image_receiver.control_bar import ControlBar
 
 
 APP_TITLE = "Image Logger"

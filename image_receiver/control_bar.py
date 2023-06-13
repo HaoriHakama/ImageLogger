@@ -1,8 +1,8 @@
 import flet as ft
 from typing import Callable
 
-from image_logger.image_list_maneger import ImageListManeger
-from image_logger.index_maneger import IndexManeger
+from image_receiver.image_list_maneger import ImageListManeger
+from image_receiver.index_maneger import IndexManeger
 
 
 class ControlBar(ft.UserControl):
