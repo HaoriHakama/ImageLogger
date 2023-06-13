@@ -10,14 +10,21 @@ APP_TITLE = "Image Logger"
 
 
 class App:
-    def __init__(self) -> None:
-        self.index: int | None = None
-        self.image_list_maneger = ImageListManeger()
-        self.index_maneger = IndexManeger(self.image_list_maneger)
-
     def main(self, page: ft.Page):
+        def on_new_img_received():
+            """
+            画像が更新された時に最新の画像を表示する
+            """
+            index = self.index_maneger.last_index()
+            image = self.image_list_maneger.get_img(index)
+            self.update_img_src(image)
+            page.update()
+
         page.title = APP_TITLE
         page.window_width, page.window_height = 960, 540
+
+        self.image_list_maneger = ImageListManeger(on_new_img_received)
+        self.index_maneger = IndexManeger(self.image_list_maneger)
 
         self.image = ft.Image(
             src_base64=self._load_noimage(),
@@ -74,7 +81,6 @@ class App:
         with img_path.open(mode="r", encoding="UTF-8") as f:
             img_base64 = f.read()
         return img_base64
-
 
 def start():
     ft.app(target=App().main)
