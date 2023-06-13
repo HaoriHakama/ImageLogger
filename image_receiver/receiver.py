@@ -5,7 +5,6 @@ from threading import Thread
 
 
 class Receiver:
-
     def __init__(self) -> None:
         self.q = Queue()
 

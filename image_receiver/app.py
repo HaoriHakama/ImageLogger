@@ -82,5 +82,6 @@ class App:
             img_base64 = f.read()
         return img_base64
 
+
 def start():
     ft.app(target=App().main)

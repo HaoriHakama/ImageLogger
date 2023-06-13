@@ -21,6 +21,7 @@ def log_sender(message: dict, port=9010):
 
     client.close()
 
+
 def _cv_to_base64(img):
     _, encoded = cv2.imencode(".jpg", img)
     return base64.b64encode(encoded).decode("ascii")
@@ -33,6 +34,7 @@ def main():
     log_sender({"image": image, "text": "1"})
     image = cv2.imread(FILE_PATH, 0)
     log_sender({"image": image, "text": "1"})
+
 
 if __name__ == "__main__":
     main()

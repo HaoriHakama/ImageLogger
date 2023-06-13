@@ -20,6 +20,7 @@ def log_sender(message: dict, port=9010):
 
     client.close()
 
+
 def _cv_to_base64(img):
     _, encoded = cv2.imencode(".jpg", img)
     return base64.b64decode(encoded).decode("ascii")
