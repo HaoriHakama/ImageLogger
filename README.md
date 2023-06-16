@@ -10,3 +10,5 @@
 * PyImageSocket>=1.0.1
 
 [`PyImageSocket`](https://github.com/HaoriHakama/PyImageSocket) is my Library to send images to `ImageLogger`
+
+## How to use
