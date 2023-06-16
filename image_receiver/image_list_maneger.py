@@ -1,4 +1,5 @@
-from image_receiver.receiver import Receiver
+from pyimagesocket.image_socket.image_receiver import Receiver, ImageReceiverHandler
+
 from threading import Thread
 from typing import Callable
 
@@ -20,7 +21,7 @@ class ImageListManeger:
 
     def __init__(self, on_new_img_received: Callable) -> None:
         self.image_list: list[dict] = []
-        self.receiver = Receiver()
+        self.receiver = Receiver(("localhost", 9008), ImageReceiverHandler)
         self.on_new_img_received = on_new_img_received
 
         Thread(target=self._loop, daemon=True).start()
